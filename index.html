@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Creative Landing Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #slideshow {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        .slide {
+            display: none;
+        }
+
+        .slide img {
+            width: 100%;
+            height: auto;
+        }
+
+        .slide-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #007BFF;
+            color: #fff;
+            font-size: 18px;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="slideshow">
+            <div class="slide">
+                <img src="Alderaan-Hope.png" alt="Image 1">
+                <div class="slide-text">
+                    <h1>Image 1 Title</h1>
+                    <p>Description for Image 1.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="SSD_Assault-Prototype.png" alt="Image 2">
+                <div class="slide-text">
+                    <h1>Image 2 Title</h1>
+                    <p>Description for Image 2.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="med_arkship.jpg" alt="Image 3">
+                <div class="slide-text">
+                    <h1>Image 3 Title</h1>
+                    <p>Description for Image 3.</p>
+                </div>
+            </div>
+        </div>
+        <a class="cta-button" href="#">Sign Up</a>
+    </div>
+
+    <script>
+        // JavaScript for image slideshow
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(n) {
+            slides[currentSlide].style.display = 'none';
+            currentSlide = (n + slides.length) % slides.length;
+            slides[currentSlide].style.display = 'block';
+        }
+
+        // Auto-advance the slideshow every 3 seconds
+        setInterval(() => showSlide(currentSlide + 1), 3000);
+    </script>
+</body>
+</html>
