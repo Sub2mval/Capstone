@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login with Fitbit</title>
+    <!-- Include Fitbit OAuth SDK here -->
+    <script src="https://cdn.fitbit.com/libs/auth-sdk/1.1.0/fbauth.js"></script>
+</head>
+<body>
+    <h1>Login with Fitbit</h1>
+    <button id="fitbit-login">Log in with Fitbit</button>
+
+    <script>
+        document.getElementById('fitbit-login').addEventListener('click', function () {
+            // Initialize Fitbit OAuth
+            const authClient = new FBAuth({ client_id: 'YOUR_CLIENT_ID', scope: 'activity profile' });
+
+            // Trigger the Fitbit OAuth flow
+            authClient.login();
+
+            // Handle the authorization callback (see Fitbit SDK documentation)
+        });
+    </script>
+</body>
+</html>
