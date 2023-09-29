@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1>Hello {{User.name}}</h1>
+      <p>Health Overview.</p>
+    </div>
+  </div>
+  <div class="container">
+    <form method ='post'>
+        <input type ='number' name='weight' placeholder='Weight'>
+        <input type ='number' name='height' placeholder='Height'>
+        <input type ='number' name='age' placeholder='Age'>
+        <input type ='number' name='HRV' placeholder='Heart Rate Variablity'>
+        <input type ='number' name='VO2' placeholder='VO2 Max'>
+        <input type ='submit' value='Update'>
+    </form>
+  </div>
+  <div class ="dashboard">
+    
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container" style = 'text-align: center'>
+  <div class="row">
+    <div class="col-12">
+      <h1 style = 'text-align: center'>Food Tracker</h1>
+      <p>Track your food intake here.</p>
+    </div>
+    </div>
+    <div class="container-fluid">
+        <form action="/food" method="post">
+            <input type="text" name="food" placeholder="Food">
+            <input type ="submit" value="Add Food">
+        </form>
+    </div>
+    <div>
+        <form action="/workout" method="get">
+            <input type="date" name="date" placeholder="Date" >
+            <input type ="submit" value="Today's Food Diary">
+        </form>
+    </div>
+    <div class="container">
+
+    <table class = 'center' style = '.center{ margin-left: auto; margin-right: auto;}'>
+        <tr>
+            <th>Food</th>
+            <th>Amount</th>
+            <th>Calories</th>
+            <th>Protein</th>
+            <th>Carbs</th>
+            <th>Fat</th>
+            <th>Actions</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <a href="#">Edit</a>
+                <a href="#">Delete</a>
+            </td>
+        </tr>
+    </table>
+  </div>
+  
+</div>
+{% endblock %}

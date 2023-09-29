@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container" style = 'text-align: center;'>
+  <div class="row">
+    <div class="col-12">
+      <h1>Workout Tracker</h1>
+      <p>Track your workout here.</p>
+    </div>
+  </div>
+    <div class="container-fluid">
+            <form action="/workout" method="get">
+                <input type="date" name="date" placeholder="Date" >
+                <input type ="submit" value="Today's Workout">
+            </form>
+        </div>
+        <div class="container">
+        <table>
+            <tr>
+                <th>Exercise</th>
+                <th>Weight</th>
+                <th>Sets</th>
+                <th>Reps</th>
+                <th>Actions</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <a href="#">Edit</a>
+                    <a href="#">Delete</a>
+                </td>
+            </tr>
+        </table>
+        </div>
+        <div class="container-fluid">
+            <form action="/workout" method="post">
+                <input type="text" name="Exercise" placeholder="Exercise">
+                <input type="number" name="Weight" placeholder="Weight">
+                <input type="number" name="Sets" placeholder="Sets">
+                <input type="number" name="Reps" placeholder="Reps">
+                <input type ="submit" value="Add Workout">
+            </form>
+        </div>
+    </div>    
+</div>
+{% endblock %}
